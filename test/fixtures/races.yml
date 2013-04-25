@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  stroke: MyString
+  distance: 1
+  time: 1.5
+  points: 1.5
+  place: 1
+  standard_achieved: MyString
+  swimmer: 
+  sanctioningbody: 
+  meet: 
+
+two:
+  stroke: MyString
+  distance: 1
+  time: 1.5
+  points: 1.5
+  place: 1
+  standard_achieved: MyString
+  swimmer: 
+  sanctioningbody: 
+  meet: 

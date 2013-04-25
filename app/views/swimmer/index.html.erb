@@ -1,0 +1,88 @@
+<h1>Swimmers</h1>
+<table>
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>Birthday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @swimmers.each do |swimmer| %>
+      <tr>
+        <td>
+          <%= swimmer.first %>
+        </td>
+        <td>
+          <%= swimmer.last %>
+        </td>
+        <td>
+          <%= l(swimmer.dob.to_date) %>
+        </td>
+      </tr>
+      <% swimmer.swimmer_id_keys.each do |login| %>
+        <table class="results">
+	      <thead>
+	        <tr><th colspan="5">Long Course / <%= login.data_provider.sanctioning_body.name %> / <%= login.data_provider.name %></th></tr>
+	        <tr>
+	        	<th>Meters</th>
+	        	<th>Stroke</th>
+	        	<th>Time</th>
+	        	<th>Meet Date</th>
+	        	<th>Meet</th>
+	        </tr>
+		  </thead>
+		  <tbody>
+			<% swimmer.long_course_meters_races.each do |race| %>
+	          <tr>
+	            <td class="number distance">
+	              <%= race.distance %>
+	            </td>
+	            <td class="stroke">
+	              <%= race.stroke %>
+	            </td>
+	            <td class="time number"> 
+	              <%= format_time(race.time) %>
+	            </td>
+	            <td class="date"> 
+	              <%= race.meet.start %>
+	            </td>
+	            <td class="meet"> 
+	              <%= race.meet.name %>
+	            </td>
+  	          </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <table class="results">
+	      <thead>
+	        <tr><th>Short Course</th><th colspan="4"><%= login.data_provider.sanctioning_body.name %> / <%= login.data_provider.name %></th></tr>
+		  </thead>
+		  <tbody>
+			<% swimmer.short_course_races.each do |race| %>
+	          <tr>
+	            <td class="number distance">
+	              <%= race.distance %>
+	            </td>
+	            <td class="stroke">
+	              <%= race.stroke %>
+	            </td>
+	            <td class="time number"> 
+	              <%= format_time(race.time) %>
+	            </td>
+	            <td class="date"> 
+	              <%= race.meet.start %>
+	            </td>
+	            <td class="meet"> 
+	              <%= race.meet.name %>
+	            </td>
+  	          </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

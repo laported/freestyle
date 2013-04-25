@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+h1 {
+	font-family: Helvetica;
+	font-weight:600;
+}
+
+table { 
+	border:solid 1px #ccc; 
+	padding: 5px;
+	margin-left: 1.25em; 
+	margin-bottom: 1.25em;
+}
+
+table.results tbody tr td {
+	background-color: #EEE;
+}
+
+table.results tbody tr td {
+	border-width: 1px;
+	border-color: black;
+}
+
+th {
+	font-family: Helvetica;
+	color: #EEE;
+	background-color: #333;
+	padding: 3px;
+}
+
+td.number, td.date {
+	text-align: right;
+	padding-right: 6px;
+}
+
+td.meet, td.date { padding-left: 6px; }
+
+.meet {
+	font-family: Helvetica;
+}
+
+.time, .distance, .stroke, .date { 
+  font-family: Monaco;
+}
+

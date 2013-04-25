@@ -1,0 +1,1203 @@
+
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript" TYPE="TEXT/JAVASCRIPT" SRC="aAthlete.js">
+<!--
+//-->
+</SCRIPT>
+
+<style type="text/css" media="screen">
+	.wrapper {
+		margin: 0 auto;
+		width: 900px;
+		text-align: left;
+}</style>
+<link rel="stylesheet" href="aTMO.css" type="text/css">
+</HEAD>
+
+<body>
+
+<form action=checkproductd()  method=get id=frmReport name=frmReport>
+<div class="wrapper">
+
+
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<STYLE type="text/css">
+A:link {text-decoration:none;color:white;};
+A:visited {text-decoration:none;color:white;};
+A:hover {text-decoration:none;color:yellow;};
+.menu {  font-family: Arial, Helvetica, sans-serif; font-size: 12px;  line-height: 15px; font-weight: bold;
+</STYLE>
+      
+<span  style="float:left;margin-left:0;" align="left" id="noprint">
+  
+<table width="1000" border="0" cellpadding="2" height="57" bgcolor="#003366">
+    <tr valign="top">
+      
+    <td width="12" height="20" class="menu"></td>
+    <td align="left"  height="20" class="menu" width="1925">
+			<b><font face="Times New Roman, Times, serif" size="3" color="#FFFFFF">&nbsp;Hy-Tek's </FONT><FONT COLOR="FFFF99" SIZE="3">Team Stats </FONT><FONT COLOR="FFFFFF" SIZE="3"><i>Online</i></font></b>&nbsp;
+			<font color="#FFFF99" SIZE="2"><b>
+      
+        &nbsp;&nbsp;&nbsp;&nbsp;<font size="1" COLOR="#FFFFFF">	Version 2.0C</font>			</b></font>
+			</td>
+    </tr>
+    <tr valign="top">
+     <td width="12" height="23" class="menu"></td>
+      <td width="1925" height="23" class="menu">
+     
+		<a href="index.asp?STRIPPED="><img src="buttonHome.gif" alt="Home Page contains Team selection and Team Information."></a>
+	
+	&nbsp;
+	<a href="aATHLETE.asp?DB="><img src="buttonAthlete.gif"></a>
+      &nbsp;
+	  
+	      		<a href="aTeamResults.Asp?db=&TEAM=0&CODE=&STROKE=1&DISTANCE=100&FASTEST=1&theSORT=Score%>""><img src="buttonRank.gif" alt="Allows you to view Results Ranking by LSC."></a>
+				
+	      &nbsp;
+		 
+      <a href="aTeams.Asp?DB=&SEASON=on"><img src="buttonTeams.gif" alt="Allows you to view Results by Team."></a>
+      &nbsp;
+      <a href="aMEETS.asp?DB="><img src="buttonMeetResults.gif"></a>
+      &nbsp;
+      <a href="aMEETS.asp?ENTRY=TRUE&DB="><img src="buttonEntries.gif" alt="Teams may optionally show Entries for future meets."></a>
+      &nbsp;
+      <a href="aRECORDS.ASP?DB="><img src="buttonRecords.gif" alt="Teams may optionally show any one record file."></a>
+      &nbsp;
+      <a href="aSTANDARDS.ASP?DB="><img src="buttonStandards.gif" alt="Teams may optionally show any one set of Time Standards."></a>
+      &nbsp;
+      <a href="" onClick="javascript:help_window=window.open('http://www.sports-tek.com/tmonline/help/index.html','help_window','scrollbars=yes,menu=false,resizable=yes');help_window.focus(); return false"><img src="buttonHelp.gif"></a></td>
+    </tr>
+      
+  </table>
+</span>
+
+<div  style="margin-left:0; width:900; float:left; margin=top:0;">
+  <TABLE   BORDER=0 CELLPADDING=0 CELLSPACING=0  width="895" height="49" class="Label">
+    <tr valign="bottom"  height=21> 
+	    <td width="450"21" class="Label" height="23">&nbsp;  
+ 	      <input type="hidden" name="theLetter" value="">
+	        Group
+	<select name=lstGroup tabindex="4"  onChange="CheckProduct(0)">
+	<option value=""  selected>&nbsp; 
+		
+    	</option>
+		<option value="B" >B
+    	</option>
+		<option value="G" >G
+    	</option>
+		<option value="GLD" >GLD
+    	</option>
+		<option value="PG5" >PG5
+    </option>
+	</select>
+  
+		&nbsp;&nbsp;Sub Group 
+		<select name=lstSubGroup tabindex="5"  onChange="CheckProduct(0)">
+		<option value=""  selected>&nbsp; 
+		
+            </option>
+			<option value="AG" > 
+			AG
+            </option>
+			<option value="S" > 
+			S
+                        </option>
+		</select>
+		&nbsp;&nbsp;Yr
+		
+		 <select name=lstClass tabindex="6"  onChange="CheckProduct(0)">
+		 <option value=""  selected>&nbsp; 
+		        
+        </option>
+		<option value="  " > 
+		  
+        </option>
+		<option value="0 " > 
+		0 
+        </option>
+		<option value="01" > 
+		01
+        </option>
+		<option value="03" > 
+		03
+        </option>
+		<option value="09" > 
+		09
+        </option>
+		<option value="1 " > 
+		1 
+        </option>
+		<option value="10" > 
+		10
+        </option>
+		<option value="11" > 
+		11
+        </option>
+		<option value="12" > 
+		12
+        </option>
+		<option value="13" > 
+		13
+        </option>
+		<option value="1s" > 
+		1s
+        </option>
+		<option value="2 " > 
+		2 
+        </option>
+		<option value="2n" > 
+		2n
+        </option>
+		<option value="3 " > 
+		3 
+        </option>
+		<option value="3r" > 
+		3r
+        </option>
+		<option value="4 " > 
+		4 
+        </option>
+		<option value="4t" > 
+		4t
+        </option>
+		<option value="5 " > 
+		5 
+        </option>
+		<option value="5t" > 
+		5t
+        </option>
+		<option value="6 " > 
+		6 
+        </option>
+		<option value="6t" > 
+		6t
+        </option>
+		<option value="7 " > 
+		7 
+        </option>
+		<option value="7t" > 
+		7t
+        </option>
+		<option value="8 " > 
+		8 
+        </option>
+		<option value="8t" > 
+		8t
+        </option>
+		<option value="9 " > 
+		9 
+        </option>
+		<option value="C " > 
+		C 
+        </option>
+		<option value="CL" > 
+		CL
+        </option>
+		<option value="CO" > 
+		CO
+        </option>
+		<option value="El" > 
+		El
+        </option>
+		<option value="FR" > 
+		FR
+        </option>
+		<option value="HI" > 
+		HI
+        </option>
+		<option value="HO" > 
+		HO
+        </option>
+		<option value="HS" > 
+		HS
+        </option>
+		<option value="JH" > 
+		JH
+        </option>
+		<option value="JR" > 
+		JR
+        </option>
+		<option value="K " > 
+		K 
+        </option>
+		<option value="MS" > 
+		MS
+        </option>
+		<option value="OU" > 
+		OU
+        </option>
+		<option value="RE" > 
+		RE
+        </option>
+		<option value="SO" > 
+		SO
+        </option>
+		<option value="SP" > 
+		SP
+        </option>
+		<option value="SR" > 
+		SR
+        </option>
+		<option value="WI" > 
+		WI
+        </option>
+		</select>
+      </td>
+      <td align=left height="23" class="Label" width="445">
+     	Find Athlete
+		<input type="text" size="15" maxlength="15" name="txtSearch" style="font-family:Arial; font-size:8pt;"  value="LAPORTE">
+        <input type="button"  class="abutton" name="btnRefresh3"  value="Go" onClick="CheckProduct(0)">
+		&nbsp;&nbsp; 			  
+		
+        <input type="button"  class="abutton" name="btnRefresh2"  value="Next" onClick="NextPressed()">
+	  </td>
+    </tr>
+    <tr valign="middle"> 
+      <td  align=left height="25" class="Label" width="450">&nbsp;  
+		<input type="radio" name="radiosex" value="Female"   onclick="CheckProduct(0)">Female
+		<input type="radio" name="radiosex" value="Male"   onclick="CheckProduct(0)">Male
+		&nbsp;&nbsp;Team
+		
+		<select name=lstTeam  style="font-family:Arial; font-size:8pt;"  onChange="CheckProduct(0)">
+		<option value=""  selected>&nbsp; 
+		
+           	</option>
+			<option value="415" > 
+			AAH Ann Arbor Huron
+           	</option>
+			<option value="416" > 
+			AAP Ann Arbor Pioneer
+           	</option>
+			<option value="1" > 
+			AASC Ann Arbor Swim Club
+           	</option>
+			<option value="417" > 
+			AASKY Ann Arbor Skyline
+           	</option>
+			<option value="139" > 
+			ALB Albion Aquacats
+           	</option>
+			<option value="140" > 
+			ALMA Alma Swim Club
+           	</option>
+			<option value="240" > 
+			AOK Amphibians of Kalamazoo
+           	</option>
+			<option value="2" > 
+			ASC Aquaneers Swim Club
+           	</option>
+			<option value="320" > 
+			ATS Allegan TigerSharks
+           	</option>
+			<option value="5" > 
+			BAC Bulldog Aquatic Club
+           	</option>
+			<option value="142" > 
+			BAYS Bay Area Youth Swimming
+           	</option>
+			<option value="44" > 
+			BBA Birmingham Bloomfield Atlantis
+           	</option>
+			<option value="143" > 
+			BBD Birmingham Blue Dolphins
+           	</option>
+			<option value="418" > 
+			BBR Birmingham Brother Rice
+           	</option>
+			<option value="141" > 
+			BCAC Battle Creek Aquatic Club
+           	</option>
+			<option value="6" > 
+			BCD Byron Center Dawgs
+           	</option>
+			<option value="278" > 
+			BEST Brighton EELS Swim Team
+           	</option>
+			<option value="474" > 
+			BHSJ Benton Harbor-St. Joseph YMCA
+           	</option>
+			<option value="458" > 
+			BRDG Bridgman Co-op
+           	</option>
+			<option value="419" > 
+			BRI Brighton
+           	</option>
+			<option value="472" > 
+			BVCY Beavercreek Branch YMCA
+           	</option>
+			<option value="476" > 
+			BWO Blue Water Area YMCA
+           	</option>
+			<option value="4" > 
+			BWSC Blue Water Swim Club
+           	</option>
+			<option value="471" > 
+			BYB Beaumont Centre Family YMCA
+           	</option>
+			<option value="459" > 
+			BYC Byron Center
+           	</option>
+			<option value="281" > 
+			CAC Chelsea Aquatic Club
+           	</option>
+			<option value="420" > 
+			CANTN Canton
+           	</option>
+			<option value="7" > 
+			CAST Capital Area Swim Team
+           	</option>
+			<option value="421" > 
+			CLAK Clarkston
+           	</option>
+			<option value="479" > 
+			CON Concord Swim Team
+           	</option>
+			<option value="407" > 
+			CSST Charlevoix Stingrays Swim Team
+           	</option>
+			<option value="50" > 
+			CSW Clarkston Sea Wolves
+           	</option>
+			<option value="3" > 
+			CUDA Barracuda
+           	</option>
+			<option value="460" > 
+			CVALL Chippewa Valley
+           	</option>
+			<option value="55" > 
+			CW Club Wolverine
+           	</option>
+			<option value="391" > 
+			DART Dearborn Area Recreational Tit
+           	</option>
+			<option value="228" > 
+			DASC Detroit Aquatic Swim Club
+           	</option>
+			<option value="274" > 
+			DAST DeWitt Area Swim Team
+           	</option>
+			<option value="9" > 
+			DCAC Dexter Community Aquatic Club
+           	</option>
+			<option value="422" > 
+			DCC Detroit Catholic Central
+           	</option>
+			<option value="171" > 
+			DEL Delphinus Swim Club
+           	</option>
+			<option value="36" > 
+			DRD Dearborn Dolphins
+           	</option>
+			<option value="226" > 
+			DRST Detroit Recreation Swim Team
+           	</option>
+			<option value="8" > 
+			DWSC DeWitt Swim Club
+           	</option>
+			<option value="51" > 
+			DYC Detroit Yacht Club
+           	</option>
+			<option value="487" > 
+			EAC Erie Aquatics Club
+           	</option>
+			<option value="497" > 
+			EBSC Elmbrook Swim Club
+           	</option>
+			<option value="10" > 
+			EGRA East Grand Rapids Waves
+           	</option>
+			<option value="461" > 
+			EKEN East Kentwood
+           	</option>
+			<option value="190" > 
+			EMU Eastern Michigan University
+           	</option>
+			<option value="206" > 
+			ERSC Eaton Rapids Silver Sharks
+           	</option>
+			<option value="424" > 
+			FAR Famington-Harrison
+           	</option>
+			<option value="52" > 
+			FAST Fenton Tiger Sharks
+           	</option>
+			<option value="477" > 
+			FFY Francis Family YMCA
+           	</option>
+			<option value="11" > 
+			FFYS Farmington YMCA Stingrays
+           	</option>
+			<option value="45" > 
+			FLY Flint YMCA
+           	</option>
+			<option value="414" > 
+			FPC POWERS CATHOLIC HIGH SCHOOL
+           	</option>
+			<option value="462" > 
+			GB Grand Blanc
+           	</option>
+			<option value="188" > 
+			GG Gaylord Gators
+           	</option>
+			<option value="463" > 
+			GH Grand Haven
+           	</option>
+			<option value="46" > 
+			GLA Great Lakes Aquatics
+           	</option>
+			<option value="12" > 
+			GLSC Grand Ledge Swim Club
+           	</option>
+			<option value="246" > 
+			GLT Great Lakes Tritons
+           	</option>
+			<option value="191" > 
+			GPG Grosse Pointe Gators
+           	</option>
+			<option value="464" > 
+			GRDVL Grandville
+           	</option>
+			<option value="425" > 
+			GRFHN FH Northern
+           	</option>
+			<option value="321" > 
+			GRNS Grand Rapids Nova Sad
+           	</option>
+			<option value="488" > 
+			GTAC GTAC
+           	</option>
+			<option value="296" > 
+			GVA Grand Vallley Aquatics
+           	</option>
+			<option value="174" > 
+			HBM Haslett Blue Marlins
+           	</option>
+			<option value="273" > 
+			HEAT Hudsonville Eagle Aquatics Tea
+           	</option>
+			<option value="279" > 
+			HHSC Hartland Hurricanes Swim Club
+           	</option>
+			<option value="429" > 
+			HOLT Holt
+           	</option>
+			<option value="430" > 
+			HOW Howell
+           	</option>
+			<option value="501" > 
+			HPAC Highland Park Aquatics Club
+           	</option>
+			<option value="158" > 
+			HSC Hammerhead Swim Club
+           	</option>
+			<option value="275" > 
+			HSS Howell Sea Serpents
+           	</option>
+			<option value="433" > 
+			HTLC L'Anse Creuse
+           	</option>
+			<option value="426" > 
+			HTLD Hartland
+           	</option>
+			<option value="177" > 
+			HUST Hurricanes Swim Team
+           	</option>
+			<option value="185" > 
+			HVP Huron Valley Penguins
+           	</option>
+			<option value="428" > 
+			HWO Holland West Ottawa
+           	</option>
+			<option value="37" > 
+			ITS Ionia Tritons
+           	</option>
+			<option value="431" > 
+			JACK Jackson
+           	</option>
+			<option value="14" > 
+			JAG Jaguar Swim Club
+           	</option>
+			<option value="15" > 
+			JAWS Jenison Area Wildcat Swimming
+           	</option>
+			<option value="13" > 
+			JCAC Jackson County Aquatic Club
+           	</option>
+			<option value="237" > 
+			KAW Kingfish Aquatic Club of Water
+           	</option>
+			<option value="297" > 
+			KRON Kronos
+           	</option>
+			<option value="53" > 
+			L Lakers
+           	</option>
+			<option value="217" > 
+			LAC Lakeview Aquatic Club
+           	</option>
+			<option value="220" > 
+			LATS Lakes Area Tridents Swimming
+           	</option>
+			<option value="39" > 
+			LCSC Livonia Community Swim Club
+           	</option>
+			<option value="200" > 
+			LCY YMCA of Lenawee County
+           	</option>
+			<option value="38" > 
+			LDSC Leroy Dues Swim Club
+           	</option>
+			<option value="409" > 
+			LESD Lake Erie Silver Dolphins
+           	</option>
+			<option value="434" > 
+			LEV Lansing
+           	</option>
+			<option value="432" > 
+			LKOR Lake Orion
+           	</option>
+			<option value="319" > 
+			LL Liquid Lightning
+           	</option>
+			<option value="16" > 
+			LOLL Lake Orion Liquid Lightning
+           	</option>
+			<option value="435" > 
+			LSTEV Livonia Stevenson
+           	</option>
+			<option value="152" > 
+			MAM Marlin Aquatic OF Michian
+           	</option>
+			<option value="405" > 
+			MCA Motor City Aquatics
+           	</option>
+			<option value="485" > 
+			MCA! Motor City Aquatics
+           	</option>
+			<option value="159" > 
+			MI Michigan Zone Team
+           	</option>
+			<option value="247" > 
+			MICH University of Michigan
+           	</option>
+			<option value="283" > 
+			MLA Michigan Lakeshore Aquatics
+           	</option>
+			<option value="436" > 
+			MONR Monroe
+           	</option>
+			<option value="205" > 
+			MPP Mount Pleasant Pacers
+           	</option>
+			<option value="144" > 
+			MSC Milan Swim Club
+           	</option>
+			<option value="221" > 
+			MSU Michigan State University
+           	</option>
+			<option value="186" > 
+			MYM Macomb Y Marlins
+           	</option>
+			<option value="280" > 
+			MYST Muskegon Y Swim Team
+           	</option>
+			<option value="480" > 
+			NASA Northridge Area Swim Assoc.
+           	</option>
+			<option value="160" > 
+			NBYG Niles-Buchanan Y Gators
+           	</option>
+			<option value="478" > 
+			NBYM- Niles-Buchanan YMCA
+           	</option>
+			<option value="437" > 
+			NORVL Northville
+           	</option>
+			<option value="438" > 
+			NOVI Novi
+           	</option>
+			<option value="17" > 
+			NOW North Oakland Waves
+           	</option>
+			<option value="40" > 
+			NS Novi Sturgeons
+           	</option>
+			<option value="410" > 
+			NTSC New Trier Swim Club
+           	</option>
+			<option value="18" > 
+			NWSC Northwest Swim Club
+           	</option>
+			<option value="193" > 
+			OASC Ogemaw Area Swim Club
+           	</option>
+			<option value="145" > 
+			OES Ovid-Elsie Stingrays
+           	</option>
+			<option value="19" > 
+			OLY Oakland Live Yers
+           	</option>
+			<option value="325" > 
+			OU Oakland University
+           	</option>
+			<option value="47" > 
+			PA Pointe Aquatics
+           	</option>
+			<option value="21" > 
+			PAC Portage Aquatic Club
+           	</option>
+			<option value="236" > 
+			PACP Pinckney Aquatic Club
+           	</option>
+			<option value="20" > 
+			PCC Plymouth Canton Cruisers
+           	</option>
+			<option value="439" > 
+			PLYMT Plymouth
+           	</option>
+			<option value="146" > 
+			PSC Poseidon Swim Club
+           	</option>
+			<option value="268" > 
+			RAC Razor Aquatics
+           	</option>
+			<option value="22" > 
+			RAYS Rapid Area YMCA Swimmers
+           	</option>
+			<option value="48" > 
+			RDSC Romeo Dolphin Swim Club
+           	</option>
+			<option value="440" > 
+			ROCH Rochester
+           	</option>
+			<option value="147" > 
+			ROCK Rockford Riptide
+           	</option>
+			<option value="441" > 
+			ROCK Rockford
+           	</option>
+			<option value="442" > 
+			ROMEO Romeo
+           	</option>
+			<option value="495" > 
+			RSA Raleigh Swimming Association
+           	</option>
+			<option value="484" > 
+			RYD USA Ridgewood Dolphins
+           	</option>
+			<option value="282" > 
+			S Spartan Swim Club
+           	</option>
+			<option value="25" > 
+			SAC Spartan Aquatic Club
+           	</option>
+			<option value="444" > 
+			SAL Saline
+           	</option>
+			<option value="443" > 
+			SALEM Salem
+           	</option>
+			<option value="403" > 
+			SBYS Saginaw Bay YMCA Sharks
+           	</option>
+			<option value="49" > 
+			SC The Sports Club
+           	</option>
+			<option value="24" > 
+			SCS South Central Swimmers
+           	</option>
+			<option value="499" > 
+			SHOR Shorewood Swim Club
+           	</option>
+			<option value="26" > 
+			SJA St.Joseph Aquatics
+           	</option>
+			<option value="161" > 
+			SJSL St. Johns Sea Lions
+           	</option>
+			<option value="394" > 
+			SLA South Lyon Aquatics
+           	</option>
+			<option value="402" > 
+			SLSC Shoreline Lightning Swim Club
+           	</option>
+			<option value="445" > 
+			SLYON South Lyon
+           	</option>
+			<option value="41" > 
+			SMAC So Michigan Aquatic Club
+           	</option>
+			<option value="54" > 
+			SSC Southfield Swim Club
+           	</option>
+			<option value="481" > 
+			SSC Southeastern Swim Club of Fish
+           	</option>
+			<option value="42" > 
+			SSD Sterling Silver Dolphins
+           	</option>
+			<option value="201" > 
+			SST Saline Swim Team
+           	</option>
+			<option value="154" > 
+			STAR Star Aquatics Swim Club
+           	</option>
+			<option value="470" > 
+			STRS Battle Creek Family YMCA
+           	</option>
+			<option value="482" > 
+			SWAC SWAC SWIM TEAM
+           	</option>
+			<option value="183" > 
+			SWAT South West Michigan Aquatics
+           	</option>
+			<option value="218" > 
+			SWYM Southwest Y Michigan Swimming
+           	</option>
+			<option value="23" > 
+			SYS Saginaw Y Sharks
+           	</option>
+			<option value="27" > 
+			TCSC Traverse City Breakers
+           	</option>
+			<option value="162" > 
+			TCY Tri-cities 'Y'
+           	</option>
+			<option value="446" > 
+			TROY Troy
+           	</option>
+			<option value="43" > 
+			TSC Trenton Swim Club
+           	</option>
+			<option value="176" > 
+			TSSD Tiger Sharks Swim Team of Detr
+           	</option>
+			<option value="427" > 
+			UFORD HENRY FORD II
+           	</option>
+			<option value="423" > 
+			UIKE Eisenhower
+           	</option>
+			<option value="151" > 
+			UM University of Michigan
+           	</option>
+			<option value="494" > 
+			UN Unnattached
+           	</option>
+			<option value="500" > 
+			UN Unattached
+           	</option>
+			<option value="483" > 
+			UN UNATTACHED-IN
+           	</option>
+			<option value="502" > 
+			UN UnAtt - Kentucky
+           	</option>
+			<option value="489" > 
+			UN un
+           	</option>
+			<option value="28" > 
+			UN Unattached
+           	</option>
+			<option value="492" > 
+			UN Unnattached
+           	</option>
+			<option value="493" > 
+			UN Unnattached
+           	</option>
+			<option value="504" > 
+			UN UNAtt-TCSC
+           	</option>
+			<option value="486" > 
+			UN-0! Unattached
+           	</option>
+			<option value="454" > 
+			UN-01 Unattached L
+           	</option>
+			<option value="455" > 
+			UN-02 Unattached LL
+           	</option>
+			<option value="456" > 
+			UN-03 Unattached SC
+           	</option>
+			<option value="457" > 
+			UN-04 Unattached SWYM
+           	</option>
+			<option value="506" > 
+			UN-05 Unattached
+           	</option>
+			<option value="452" > 
+			UN-06 Unattached
+           	</option>
+			<option value="505" > 
+			UN-07 Unattached
+           	</option>
+			<option value="453" > 
+			UN-08 Unattached
+           	</option>
+			<option value="451" > 
+			UN-09 Unattached
+           	</option>
+			<option value="508" > 
+			UN-10 Unattached
+           	</option>
+			<option value="507" > 
+			UN-11 Unattached
+           	</option>
+			<option value="509" > 
+			UN-12 Unattached
+           	</option>
+			<option value="413" > 
+			UNAT Unattached
+           	</option>
+			<option value="412" > 
+			UN-CW UnAtt - Club Wolverine
+           	</option>
+			<option value="490" > 
+			UN-EM unattached emu
+           	</option>
+			<option value="408" > 
+			UN-MI Unattached Michigan
+           	</option>
+			<option value="491" > 
+			UN-OH unattached ohio
+           	</option>
+			<option value="234" > 
+			USA USA Swimming
+           	</option>
+			<option value="465" > 
+			USHS Sterling Heights Stevenson
+           	</option>
+			<option value="32" > 
+			USSC Utica Shelby Swim Club
+           	</option>
+			<option value="34" > 
+			W Wolverine Aquatics
+           	</option>
+			<option value="323" > 
+			WAM Woodhaven Area Marlins
+           	</option>
+			<option value="170" > 
+			WASH Wahtenaw Area Swimming Hornets
+           	</option>
+			<option value="148" > 
+			WAVE Wave Runners
+           	</option>
+			<option value="448" > 
+			WBLM West Bloomfield
+           	</option>
+			<option value="449" > 
+			WJG Westland John Glenn
+           	</option>
+			<option value="447" > 
+			WLC Walled Lake Central
+           	</option>
+			<option value="149" > 
+			WMS West Michigan Swimmers
+           	</option>
+			<option value="178" > 
+			WOSC West Ottawa Swim Club
+           	</option>
+			<option value="33" > 
+			WPSC Waverly Piranhas Swim Club
+           	</option>
+			<option value="184" > 
+			WPWR Windemere Park WaveRunners
+           	</option>
+			<option value="248" > 
+			WRL WaveRunners of Lansing
+           	</option>
+			<option value="498" > 
+			YCF Florida
+           	</option>
+			<option value="35" > 
+			YOSC Ypsi Otters Swim Club Uss
+           	</option>
+			<option value="172" > 
+			YPAC South Oakland YMCA
+           	</option>
+			<option value="473" > 
+			YSWV Beckley-Raleigh County YMCA
+           	</option>
+			<option value="503" > 
+			ZAGS ZEELAND AG SWIM
+           	</option>
+			<option value="450" > 
+			ZEE ZEELAND
+         </option>
+		</select>
+	  </td>
+      <td align=left  height="25" class="Label" width="445">
+      	 
+             Records per page
+          <input type="text" size="3" maxlength="3" name="txtPageSize" style="font-family:Arial; font-size:8pt;"  value="2000">
+          	&nbsp;
+          <input type="button"  class="abutton" name="btnRefresh"  value="Refresh" onClick="RefreshPressed()" height="30">
+                &nbsp;&nbsp;&nbsp;Go to page
+           <select size="1" name="lstPages" onChange="CheckProduct(0)">
+            
+ 		            
+            <option selected value="1">1
+          	
+           	</option>
+			</select>
+				  
+       </td>
+    </tr>
+  </TABLE>
+ </div>
+ <div class="smalltext" style="margin-top:5; margin-left:30; width:850;">
+  <input type="hidden" name="hiddenField" value="upload\MichiganSwimmingLSCOfficeCopy.mdb">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=A&Team=">A</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=B&Team=">B</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=C&Team=">C</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=D&Team=">D</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=E&Team=">E</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=F&Team=">F</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=G&Team=">G</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=H&Team=">H</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=I&Team=">I</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=J&Team=">J</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=K&Team=">K</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=L&Team=">L</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=M&Team=">M</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=N&Team=">N</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=O&Team=">O</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=P&Team=">P</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=Q&Team=">Q</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=R&Team=">R</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=S&Team=">S</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=T&Team=">T</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=U&Team=">U</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=V&Team=">V</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=W&Team=">W</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=X&Team=">X</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=Y&Team=">Y</a>&nbsp;&nbsp; 
+  <a href="aATHLETE.asp?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&Letter=Z&Team=">Z</a>&nbsp; 
+	</div>
+	<div style="margin-top:10; margin-left:10; float:left;">
+    <TABLE summary="Athletes" border="0" cellspacing="1" cellpadding="2" bgcolor="#000000" id=FieldTable width="740">
+      <TR bgcolor="#6699CC" color="#FFFFFF"> 
+        <TH scope="col" width="40" align=center class="TopRow">&nbsp;</Th>
+        <TH scope="col" width="100" align=center class="TopRow">Last</Th>
+        <TH scope="col" width ="100" align=center class="TopRow">First</TH>
+        <TH scope="col" width="27" align=center class="TopRow">Age</TH>
+        <TH scope="col" width="27" align=center class="TopRow">Gen</TH>
+        <TH scope="col" width="30" align=center class="TopRow">Gr</TH>
+        <TH scope="col" width="30" align=center class="TopRow">Sub</TH>
+        <TH scope="col" width="30" align=center class="TopRow">YR</TH>
+        <th scope="col" width="61" align=center class="TopRow"> &nbsp;&nbsp;Team</th>
+        <TH scope="col" width="220" align=center class="TopRow">&nbsp;&nbsp;Full Team Name</TH>
+    </TR>
+    <!-- Display the data rows. -->
+     
+    
+			
+    <TR> 
+			<TD align=right bgcolor="#FFFFFF" class="trow" width="40"><a href="aATHRESULTSWithPSMR.ASP?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&ATH=12594&FASTEST=1">Times</a></TD>
+      <TD bgcolor="#FFFFFF"  align=left class="trow" width="100">LaPorte</TD>
+      <TD   bgcolor="#FFFFFF"  align=left class="trow" width="100">
+		Adam</TD>
+      <TD  bgcolor="#FFFFFF"  align=RIGHT class="trow" width="27">
+		20&nbsp;</TD>
+      <TD bgcolor="#FFFFFF"  align=center class="trow" width="27">
+		M</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=center class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF" align=right class="trow" width="61">
+		LCSC</TD>
+      <TD  bgcolor="#FFFFFF" align=left class="trow" width="220">
+		Livonia Community Swim Club</TD>
+    </TR>
+    
+			
+    <TR> 
+			<TD align=right bgcolor="#FFFFFF" class="trow" width="40"><a href="aATHRESULTSWithPSMR.ASP?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&ATH=11655&FASTEST=1">Times</a></TD>
+      <TD bgcolor="#FFFFFF"  align=left class="trow" width="100">LaPorte</TD>
+      <TD   bgcolor="#FFFFFF"  align=left class="trow" width="100">
+		Benjamin</TD>
+      <TD  bgcolor="#FFFFFF"  align=RIGHT class="trow" width="27">
+		12&nbsp;</TD>
+      <TD bgcolor="#FFFFFF"  align=center class="trow" width="27">
+		M</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=center class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF" align=right class="trow" width="61">
+		LCSC</TD>
+      <TD  bgcolor="#FFFFFF" align=left class="trow" width="220">
+		Livonia Community Swim Club</TD>
+    </TR>
+    
+			
+    <TR> 
+			<TD align=right bgcolor="#FFFFFF" class="trow" width="40"><a href="aATHRESULTSWithPSMR.ASP?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&ATH=11656&FASTEST=1">Times</a></TD>
+      <TD bgcolor="#FFFFFF"  align=left class="trow" width="100">LaPorte</TD>
+      <TD   bgcolor="#FFFFFF"  align=left class="trow" width="100">
+		Kelly</TD>
+      <TD  bgcolor="#FFFFFF"  align=RIGHT class="trow" width="27">
+		17&nbsp;</TD>
+      <TD bgcolor="#FFFFFF"  align=center class="trow" width="27">
+		F</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=center class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF" align=right class="trow" width="61">
+		LCSC</TD>
+      <TD  bgcolor="#FFFFFF" align=left class="trow" width="220">
+		Livonia Community Swim Club</TD>
+    </TR>
+    
+			
+    <TR> 
+			<TD align=right bgcolor="#FFFFFF" class="trow" width="40"><a href="aATHRESULTSWithPSMR.ASP?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&ATH=798&FASTEST=1">Times</a></TD>
+      <TD bgcolor="#FFFFFF"  align=left class="trow" width="100">LAPORTE</TD>
+      <TD   bgcolor="#FFFFFF"  align=left class="trow" width="100">
+		LINDSEY</TD>
+      <TD  bgcolor="#FFFFFF"  align=RIGHT class="trow" width="27">
+		19&nbsp;</TD>
+      <TD bgcolor="#FFFFFF"  align=center class="trow" width="27">
+		F</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=center class="trow" width="30">
+		  &nbsp;</TD>
+      <TD  bgcolor="#FFFFFF" align=right class="trow" width="61">
+		BBA</TD>
+      <TD  bgcolor="#FFFFFF" align=left class="trow" width="220">
+		Birmingham Bloomfield Atlantis</TD>
+    </TR>
+    
+			
+    <TR> 
+			<TD align=right bgcolor="#FFFFFF" class="trow" width="40"><a href="aATHRESULTSWithPSMR.ASP?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&ATH=11657&FASTEST=1">Times</a></TD>
+      <TD bgcolor="#FFFFFF"  align=left class="trow" width="100">LaPorte</TD>
+      <TD   bgcolor="#FFFFFF"  align=left class="trow" width="100">
+		Matthew</TD>
+      <TD  bgcolor="#FFFFFF"  align=RIGHT class="trow" width="27">
+		15&nbsp;</TD>
+      <TD bgcolor="#FFFFFF"  align=center class="trow" width="27">
+		M</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=center class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF" align=right class="trow" width="61">
+		LCSC</TD>
+      <TD  bgcolor="#FFFFFF" align=left class="trow" width="220">
+		Livonia Community Swim Club</TD>
+    </TR>
+    
+			
+    <TR> 
+			<TD align=right bgcolor="#FFFFFF" class="trow" width="40"><a href="aATHRESULTSWithPSMR.ASP?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&ATH=15584&FASTEST=1">Times</a></TD>
+      <TD bgcolor="#FFFFFF"  align=left class="trow" width="100">Laporte</TD>
+      <TD   bgcolor="#FFFFFF"  align=left class="trow" width="100">
+		Naomi</TD>
+      <TD  bgcolor="#FFFFFF"  align=RIGHT class="trow" width="27">
+		14&nbsp;</TD>
+      <TD bgcolor="#FFFFFF"  align=center class="trow" width="27">
+		F</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=center class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF" align=right class="trow" width="61">
+		SC</TD>
+      <TD  bgcolor="#FFFFFF" align=left class="trow" width="220">
+		The Sports Club</TD>
+    </TR>
+    
+			
+    <TR> 
+			<TD align=right bgcolor="#FFFFFF" class="trow" width="40"><a href="aATHRESULTSWithPSMR.ASP?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&ATH=16511&FASTEST=1">Times</a></TD>
+      <TD bgcolor="#FFFFFF"  align=left class="trow" width="100">Laporte</TD>
+      <TD   bgcolor="#FFFFFF"  align=left class="trow" width="100">
+		Raphael</TD>
+      <TD  bgcolor="#FFFFFF"  align=RIGHT class="trow" width="27">
+		17&nbsp;</TD>
+      <TD bgcolor="#FFFFFF"  align=center class="trow" width="27">
+		M</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=center class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF" align=right class="trow" width="61">
+		SC</TD>
+      <TD  bgcolor="#FFFFFF" align=left class="trow" width="220">
+		The Sports Club</TD>
+    </TR>
+    
+			
+    <TR> 
+			<TD align=right bgcolor="#FFFFFF" class="trow" width="40"><a href="aATHRESULTSWithPSMR.ASP?db=upload\MichiganSwimmingLSCOfficeCopy.mdb&ATH=3402&FASTEST=1">Times</a></TD>
+      <TD bgcolor="#FFFFFF"  align=left class="trow" width="100">LAPORTE</TD>
+      <TD   bgcolor="#FFFFFF"  align=left class="trow" width="100">
+		VIKTOR</TD>
+      <TD  bgcolor="#FFFFFF"  align=RIGHT class="trow" width="27">
+		23&nbsp;</TD>
+      <TD bgcolor="#FFFFFF"  align=center class="trow" width="27">
+		M</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=left class="trow" width="30">
+		&nbsp;</TD>
+      <TD  bgcolor="#FFFFFF"  align=center class="trow" width="30">
+		  &nbsp;</TD>
+      <TD  bgcolor="#FFFFFF" align=right class="trow" width="61">
+		WAVE</TD>
+      <TD  bgcolor="#FFFFFF" align=left class="trow" width="220">
+		Wave Runners</TD>
+    </TR>
+    
+    <TR> 
+  </TABLE>
+	</div>
+  </div>
+</form>
+</BODY>
+
